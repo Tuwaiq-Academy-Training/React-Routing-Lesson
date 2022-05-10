@@ -275,7 +275,8 @@ src/App.js
     
         export default App;
 
-***وسم Router
+ ***وسم Router
+
 مفهوم
 
 يُعتبر BrowserRouter الوسم الأساسي والأب الأعلى الذي يحتوي بداخله بقية المكوّنات. يُفضل الناس عادة تسميته Router للاختصار.

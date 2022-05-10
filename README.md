@@ -273,15 +273,13 @@ src/App.js
           }
         }
     
-        export default App;
+        export default App;# وسم Router
 
- ***وسم Router
-
-مفهوم
+## **مفهوم**
 
 يُعتبر BrowserRouter الوسم الأساسي والأب الأعلى الذي يحتوي بداخله بقية المكوّنات. يُفضل الناس عادة تسميته Router للاختصار.
 
-طريقة الاستعمال
+## **طريقة الاستعمال**
 
 نقوم أولًا باستدعاء BrowserRouter من مكتبة `react-router-dom` بهذا الشكل:
 
@@ -296,7 +294,7 @@ src/App.js
 
 
     ReactDom.render(<Router> <App /> </Router>)
-***مثال***
+## **مثال**
     import React from 'react';
     import { render } from 'react-dom';
     import { BrowserRouter as Router } from 'react-router-dom';
@@ -308,14 +306,15 @@ src/App.js
       </Router>,
       document.getElementById('root')
     );
-***وسم Route
 
-***مفهوم***
+# وسم Route
+
+## **مفهوم**
 
 يُستخدم وسم Route لتحديد المسار والمكوّن المرتبط به 
 
 
-***طريقة الاستعمال***
+## **طريقة الاستعمال**
 
 لتحديد المسار الذس سيتم إضافته للURL يتم استعمال خاصية path والتي تبدأ ب/ مع كتابة الكلمة الانتقالية. أما في خاصية component فيتم تحديد المكوّن المُراد ربطه بهذا الURL وعرضه.
 
@@ -335,7 +334,7 @@ src/App.js
 وبهذا لن ينتقل المتصفح إلى Home إلا في حال كان الURL مكوّن فقط من الرمز /
 
 
-***مثال***
+## **مثال**
     import React from 'react';
     import { render } from 'react-dom';
     import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -349,7 +348,8 @@ src/App.js
       </Router>
       document.getElementById('root')
     );
-***وسم Routes
+
+ Routes
 
 ***مفهوم***
 
@@ -394,13 +394,14 @@ src/App.js
     );
 
 سيقوم هنا بعرض HomePage فقط دون NavBar.
-***وسم Link
 
-***مفهوم***
+# وسم Link
+
+## **مفهوم**
 
 إن وسم <Link> شبيه جدًا بوسم <a>، إلا أنه مختلف من ناحية عدم تحديث الصفحة عند الانتقال بواسطته.
 
-طريقة الاستعمال
+## **طريقة الاستعمال**
 
 نقوم باستعمال خاصية to لتحديد الهدف المراد الانتقال إليه. ثم نكتب الكلمة أو الكلمات المراد ظهورها كرابط تنقل بين وسم البداية والنهاية بهذا الشكل:
 
@@ -409,7 +410,7 @@ src/App.js
 
 نلاحظ أن الرابط سيتغير بعد الانتقال وسيضاف إليه /settings ولكن بدون تحديث الصفحة. نلاحظ أيضًا أن هذا المسار هو نفس المسار الذي تم تعريفه مسبقًا داخل Route.
 
-مثال
+## **مثال**
     import React, { Component } from 'react'
     export default class App extends Component {
       render() {
@@ -423,4 +424,5 @@ src/App.js
         )
       }
     }
+
 

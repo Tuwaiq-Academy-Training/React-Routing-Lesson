@@ -296,7 +296,7 @@ src/App.js
 ## **مثال**
     import React from 'react';
     import { render } from 'react-dom';
-    import { BrowserRouter as Router } from 'react-router-dom';
+    import { BrowserRouter as Router  } from 'react-router-dom';
     import './index.css';
     
     render(
@@ -318,17 +318,17 @@ src/App.js
 لتحديد المسار الذس سيتم إضافته للURL يتم استعمال خاصية path والتي تبدأ ب/ مع كتابة الكلمة الانتقالية. أما في خاصية component فيتم تحديد المكوّن المُراد ربطه بهذا الURL وعرضه.
 
 
-    <Route path="/settings" component={SettingsPage} />
+    <Route path="/settings" element={<SettingsPage/>} />
 
 قد نرغب أحيانًا بجعل المكوّن ظاهرًا في كل الصفحات، لفعل ذلك نقوم فقط بإضافة / في خاصية المسار path والتي ستكون موجودة في الURL دائمًا بغض النظر عن المكوّن الذي يتم عرضه. من أمثلة استعمال هذا المسار إدراج bar أو footer في جميع صفحات الموقع.
 
 
-    <Route path="/" component={NavBar} />
+    <Route path="/" element={<NavBar/>} />
 
 نلاحظ هنا أنه بمجرد ظهور الرمز / سيتم إظهار المكوّن المرتبط به. نستنتج من هذه الملاحظة أن ظهور الpath كجزء أو ككل من الURL كافٍ للانتقال إلى المكوّن. لتفادي هذا الأمر وجعل المتصفح ينتقل للمكوّن فقط في حاله تطابق المسار تمامًا من كامل الURL نستعمل كلمة exact كما هو موضح في المثال:
 
 
-    <Route exact path="/" component={HomePage} />
+    <Route exact path="/" element={<HomePage/>} />
 
 وبهذا لن ينتقل المتصفح إلى Home إلا في حال كان الURL مكوّن فقط من الرمز /
 
@@ -336,14 +336,14 @@ src/App.js
 ## **مثال**
     import React from 'react';
     import { render } from 'react-dom';
-    import { BrowserRouter as Router, Route } from 'react-router-dom';
+    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
     import './index.css';
     
     render(
        <Router>
-        <Route exact path="/" component={HomePage}></Route>
-        <Route path="/" component={NavBar}></Route>
-        <Route path="/settings" component={SettingsPage} />
+        <Route exact path="/" element={<HomePage/>}></Route>
+        <Route path="/" element={<NavBar/>}></Route>
+        <Route path="/settings" element={<SettingsPage/>} />
       </Router>
       document.getElementById('root')
     );
@@ -366,9 +366,9 @@ src/App.js
     
     render(
        <Router>
-        <Route exact path="/" component={HomePage}></Route>
-        <Route path="/" component={NavBar}></Route>
-        <Route path="/settings" component={SettingsPage} />
+        <Route exact path="/" element={<HomePage/>}></Route>
+        <Route path="/" element={<NavBar/>}></Route>
+        <Route path="/settings" element={<SettingsPage/>} />
       </Router>
       document.getElementById('root')
     ); 
@@ -378,15 +378,15 @@ src/App.js
 
     import React from 'react';
     import { render } from 'react-dom';
-    import { BrowserRouter as Router, Route } from 'react-router-dom';
+    import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
     import './index.css';
     
     render(
        <Router>
         <Routes>
-        <Route exact path="/" component={HomePage}></Route>
-        <Route path="/" component={NavBar}></Route>
-        <Route path="/settings" component={SettingsPage} />
+        <Route exact path="/" element={<HomePage/>}></Route>
+        <Route path="/" element={<NavBar/>}></Route>
+        <Route path="/settings" element={<SettingsPage/>} />
         <Routes>
       </Router>
       document.getElementById('root')

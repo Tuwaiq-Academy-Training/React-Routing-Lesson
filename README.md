@@ -398,7 +398,7 @@ src/App.js
 
 ## **مفهوم**
 
-إن وسم <Link> شبيه جدًا بوسم <a>، إلا أنه مختلف من ناحية عدم تحديث الصفحة عند الانتقال بواسطته.
+إن وسم <Link>  شبيه جدًا بوسم  <a> , إلا أنه مختلف من ناحية عدم تحديث الصفحة عند الانتقال بواسطته.
 
 ## **طريقة الاستعمال**
 
@@ -409,10 +409,15 @@ src/App.js
 
 نلاحظ أن الرابط سيتغير بعد الانتقال وسيضاف إليه /settings ولكن بدون تحديث الصفحة. نلاحظ أيضًا أن هذا المسار هو نفس المسار الذي تم تعريفه مسبقًا داخل Route.
 
+ 
 ## **مثال**
-    import React, { Component } from 'react'
+```js
+ 
+ import React, { Component } from 'react'
+ 
  import {Link} from "react-router-dom";
-    export default class App extends Component {
+ 
+ export default class App extends Component {
       render() {
         return (
           <div>
@@ -425,4 +430,4 @@ src/App.js
       }
     }
 
-
+```

@@ -5,128 +5,6 @@
 * التنقل بين الصفحات باستخدام BrowserRouter
 
 
-# انشاء مكوّن باستخدام طريقة Function
-
-***طريقة انشاء المكوّن***
-
-داخل مجلد src نقوم بإنشاء مجلد components لإدارة وتنظيم الملفات بالطريقة المُتعارف عليها، ثم نقوم بإنشاء ملف المكوّن الجديد بامتداد js، ثم نقوم بتفعيل اختصار rfc للإضافة الهيكل الأساسي للمكوّن.
-
-src/components/Example.js
-
-
-    import React from 'react'
-    function Example() {
-     return <h1> Hello tuwaiq students </h1>;
-    }
-    
-    export default Example;
-    
-
-بإمكاننا أيضًا للاختصار عمل export في بداية الملف بدلًا من نهايته.
-
-
-    import React from 'react'
-    export default function Example() {
-     return <h1> Hello tuwaiq students </h1>;
-    }
-
-
-***استدعاء المكوّن***
-
-لاستدعاء المكوّن علينا أن نذهب إلى App.js ونستدعي المكوّن في بداية الملف من components/Example ثم نقوم بإضافة الtag داخل دالة return، وسنرى نتيجة  Hello tuwaiq students مطبوعة على الشاشة.
-src/App.js
-
-
-    import logo from './logo.svg';
-    import './App.css';
-    import Example from './components/example';
-    
-    function App() {
-      return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        <Example/>
-        </div>
-      );
-    }
-    export default App;
-# انشاء مكوّن باستخدام طريقة Class
-
-***طريقة انشاء المكوّن***
-
-داخل مجلد src نقوم بإنشاء مجلد components لإدارة وتنظيم الملفات بالطريقة المُتعارف عليها، ثم نقوم بإنشاء ملف المكوّن الجديد بامتداد js، ثم نقوم بتفعيل اختصار rcc للإضافة الهيكل الأساسي للمكوّن.
-
-src/components/Example.js
-
-
-    import React, { Component } from 'react';
-    
-    class Example extends Component {
-      render() {
-        return <h1> Hello tuwaiq students </h1>;
-      }
-    }
-    
-    export default Example;
-
-بإمكاننا أيضًا للاختصار عمل export في بداية الملف بدلًا من نهايته.
-
-
-    import React, { Component } from 'react';
-        export default class Example extends Component {
-          render() {
-            return <h1> Hello tuwaiq students </h1>;
-          }
-        }
-
-
-***استدعاء المكوّن***
-
-لاستدعاء المكوّن علينا أن نذهب إلى App.js ونستدعي المكوّن في بداية الملف من components/Example ثم نقوم بإضافة الtag داخل دالة render، وسنرى نتيجة  Hello tuwaiq students مطبوعة على الشاشة.
-src/App.js
-
-
-     import React, { Component } from 'react';
-        import logo from './logo.svg';
-        import './App.css';
-        import Example from './components/Example';
-    
-        class App extends Component {
-          render() {
-            return (
-          <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        <Example/>
-        </div>
-            );
-          }
-        }
     
         export default App;# وسم Router
 
@@ -138,7 +16,8 @@ src/App.js
 
 نقوم أولًا باستدعاء BrowserRouter من مكتبة `react-router-dom` بهذا الشكل:
 
-
+npm i react-browser-router
+ومن ثم نقوم بتعريفه إما في main.js او App.jsx بهذه الطريقه في اعلى الصفحة 
     import { BrowserRouter } from 'react-router-dom'
     // أو نستعمل هذه التسمية
     import { BrowserRouter as Router} from 'react-router-dom'

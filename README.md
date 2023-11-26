@@ -1,12 +1,15 @@
 # React-Routing-Lesson
 
 # سوف نتعلم في هذا الدرس :
+
+
  
 * التنقل بين الصفحات باستخدام BrowserRouter
 
 
     
-        export default App;# وسم Router
+       
+  
 
 ## **مفهوم**
 
@@ -16,9 +19,14 @@
 
 نقوم أولًا باستدعاء BrowserRouter من مكتبة `react-router-dom` بهذا الشكل:
 
+npm i react-router-dom
+
 npm i react-browser-router
+
 ومن ثم نقوم بتعريفه إما في main.js او App.jsx بهذه الطريقه في اعلى الصفحة 
+
     import { BrowserRouter } from 'react-router-dom'
+    
     // أو نستعمل هذه التسمية
     import { BrowserRouter as Router} from 'react-router-dom'
 

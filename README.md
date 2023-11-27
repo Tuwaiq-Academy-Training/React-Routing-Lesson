@@ -21,7 +21,7 @@
 
 npm i react-router-dom
 
-npm i react-browser-router
+
 
 ومن ثم نقوم بتعريفه إما في main.js او App.jsx بهذه الطريقه في اعلى الصفحة 
 
